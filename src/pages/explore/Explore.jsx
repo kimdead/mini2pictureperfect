@@ -40,13 +40,13 @@ const Explore = () => {
     setLoading(true);
     fetchDataFromApi(`/discover/${mediaType}`, filters).then((res) => {
       setData(res);
-      setPageNum(1); // Set the page number to 1 for initial data
+      setPageNum(1);
       setLoading(false);
     });
   };
 
   const onPageChange = (newPage) => {
-    setPageNum(newPage); // Update the page number
+    setPageNum(newPage);
     fetchData(newPage);
   };
 
