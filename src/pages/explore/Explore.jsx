@@ -9,7 +9,7 @@ import { fetchDataFromApi } from "../../utils/api";
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
 import MovieCard from "../../components/movieCard/MovieCard";
 
-import Pagination from "../../components/pagination/Pagination"; // Import your Pagination component
+import Pagination from "../../components/pagination/Pagination";
 
 let filters = {};
 
