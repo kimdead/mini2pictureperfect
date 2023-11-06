@@ -1,0 +1,52 @@
+@import "../../mixins.scss";
+.searchResultsPage {
+  min-height: 700px;
+  padding-top: 100px;
+}
+
+.resultNotFound {
+  text-align: center;
+  color: #8e37d7;
+  box-shadow: 0 0 5px #8e37d7, 0 0 10px #8e37d7, 0 0 50px #8e37d7,
+    0 0 100px #8e37d7;
+  padding: 50px 50px;
+  width: 500px;
+  border-radius: 50%;
+  height: 500px;
+  padding-top: 160px;
+  margin: 20px auto;
+}
+.bigText {
+  font-size: 100px;
+  font-weight: 700;
+  color: #8e37d7;
+}
+.smallText {
+  font-size: 44px;
+  color: #8e37d7;
+}
+
+.searchResultsPage .pageTitle {
+  font-size: 24px;
+  line-height: 34px;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.searchResultsPage .content {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+/* Media Query for medium-sized screens */
+@media (min-width: 768px) {
+  .searchResultsPage .content {
+    gap: 20px;
+  }
+}
+
+.searchResultsPage .content .movieCard .posterBlock {
+  margin-bottom: 20px;
+}

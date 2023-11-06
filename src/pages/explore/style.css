@@ -1,0 +1,170 @@
+@import "../../mixins.scss";
+.explorePage {
+  min-height: 700px;
+  padding-top: 100px;
+}
+
+.explorePage .resultNotFound {
+  font-size: 24px;
+  color: var(--black-light);
+}
+
+.explorePage .pageHeader {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .explorePage .pageHeader {
+    flex-direction: row;
+  }
+}
+
+.explorePage .pageTitle {
+  font-size: 40px;
+  line-height: 34px;
+  color: white;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .explorePage .pageTitle {
+    margin-bottom: 0;
+  }
+}
+
+.explorePage .filters {
+  display: flex;
+  margin-top: 100px;
+  gap: 10px;
+  width: 50%;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .explorePage .filters {
+    flex-direction: row;
+  }
+}
+
+.explorePage .filters .react-select-container.genresDD {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .explorePage .filters .react-select-container.genresDD {
+    max-width: 500px;
+    min-width: 250px;
+  }
+}
+
+.explorePage .filters .react-select-container.sortbyDD {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .explorePage .filters .react-select-container.sortbyDD {
+    width: 250px;
+  }
+}
+
+.explorePage .filters .react-select-container .react-select__control {
+  box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  transition: all 0.4s ease-in-out;
+  background-image: linear-gradient(
+    to right,
+    #667eea,
+    #764ba2,
+    #6b8dd6,
+    #8e37d7
+  );
+}
+
+.explorePage .filters .react-select-container .react-select__control:hover {
+  background-position: 100% 0;
+}
+
+.explorePage
+  .filters
+  .react-select-container
+  .react-select__control
+  .react-select__value-container {
+  .react-select__placeholder,
+  .react-select__input-container {
+    color: white;
+    margin: 0 10px;
+  }
+}
+
+.explorePage
+  .filters
+  .react-select-container
+  .react-select__control
+  .react-select__single-value {
+  color: white;
+}
+
+.explorePage
+  .filters
+  .react-select-container
+  .react-select__control
+  .react-select__multi-value {
+  background-color: #333;
+  border-radius: 10px;
+}
+
+.explorePage
+  .filters
+  .react-select-container
+  .react-select__control
+  .react-select__multi-value
+  .react-select__multi-value__label {
+  color: white;
+}
+
+.explorePage
+  .filters
+  .react-select-container
+  .react-select__control
+  .react-select__multi-value
+  .react-select__multi-value__remove {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.explorePage
+  .filters
+  .react-select-container
+  .react-select__control
+  .react-select__multi-value
+  .react-select__multi-value__remove:hover {
+  color: #da2f68;
+}
+
+.explorePage .filters .react-select-container .react-select__menu {
+  top: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.explorePage .content {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .explorePage .content {
+    gap: 20px;
+  }
+}
+
+.explorePage .content .movieCard .posterBlock {
+  margin-bottom: 30px;
+}

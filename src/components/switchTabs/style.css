@@ -1,0 +1,65 @@
+.switchingTabs {
+  margin-top: 10px;
+  height: 34px;
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 2px;
+  box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+  width: 204px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.switchingTabs .tabItems {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  position: relative;
+}
+
+.switchingTabs .tabItems .tabItem {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  color: var(--black);
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  transition: color ease 0.3s;
+  color: #fff;
+}
+
+.switchingTabs .tabItems .tabItem.active {
+  color: #fff;
+}
+
+.switchingTabs .tabItems .movingBg {
+  height: 30px;
+  width: 100px;
+  position: absolute;
+  left: 0;
+  transition: left cubic-bezier(0.88, -0.35, 0.565, 1.35) 0.4s;
+  background-size: 300% 100%;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.4s ease-in-out;
+  background-image: linear-gradient(
+    to right,
+    #667eea,
+    #764ba2,
+    #6b8dd6,
+    #8e37d7
+  );
+  box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+}
+
+.switchingTabs .tabItems .movingBg:hover {
+  background-position: 100% 0;
+  opacity: 0.9;
+  box-shadow: 0 0 5px #8e37d7, 0 0 10px #8e37d7, 0 0 50px #8e37d7,
+    0 0 100px #8e37d7;
+}

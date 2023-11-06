@@ -1,0 +1,23 @@
+.circleRating {
+  border-radius: 50%;
+  padding: 2px;
+  position: relative;
+  .CircularProgressbar-trail {
+    stroke: transparent;
+    position: absolute;
+  }
+  .CircularProgressbar-text {
+    position: absolute;
+    font-size: 35px;
+    font-weight: 700;
+    fill: #333;
+  }
+}
+
+.circleRating .icon {
+  color: #cc00c2;
+  position: absolute;
+  top: -20%;
+  left: 23%;
+  font-size: 25px;
+}
