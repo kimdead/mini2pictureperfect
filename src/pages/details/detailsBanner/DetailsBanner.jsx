@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import dayjs from "dayjs";
-import { FaDownload, FaPlayCircle } from "react-icons/fa";
+import { FaStar, FaPlayCircle } from "react-icons/fa";
 import "./style.scss";
 
 import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
 import useFetch from "../../../hooks/useFetch";
 import Genres from "../../../components/genres/Genres";
-import CircleRating from "../../../components/circleRating/CircleRating";
+// import CircleRating from "../../../components/circleRating/CircleRating";
 import Img from "../../../components/lazyLoadImage/Img.jsx";
 import PosterFallback from "../../../assets/no-poster.png";
 import VideoPopup from "../../../components/videoPopup/VideoPopup";
@@ -66,7 +66,12 @@ const DetailsBanner = ({ video, crew }) => {
                     <div className="subtitle">{data.tagline}</div>
 
                     <div className="row">
-                      <CircleRating rating={data.vote_average.toFixed(1)} />
+                      <span className="rating-detail">
+                        <span className="textrate">
+                          <FaStar className="star" />
+                          {data.vote_average.toFixed(1)}
+                        </span>
+                      </span>
                       <div
                         className="playbtn"
                         onClick={() => {
