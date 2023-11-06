@@ -102,7 +102,7 @@ const Explore = () => {
           </div>
           <div className="filters">
             <Select
-              isMulti={false}
+              isMulti
               name="genres"
               value={genre}
               options={genresData?.genres}
@@ -113,7 +113,6 @@ const Explore = () => {
               isSearchable={false}
               placeholder="Select genres"
               className="react-select-container genresDD"
-              classNamePrefix="react-select"
             />
             <Select
               name="sortby"
@@ -124,7 +123,6 @@ const Explore = () => {
               isClearable={true}
               placeholder="Sort by"
               className="react-select-container sortbyDD"
-              classNamePrefix="react-select"
             />
           </div>
         </div>

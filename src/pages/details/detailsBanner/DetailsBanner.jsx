@@ -63,7 +63,6 @@ const DetailsBanner = ({ video, crew }) => {
                         data?.release_date
                       ).format("YYYY")})`}
                     </div>
-                    <div className="subtitle">{data.tagline}</div>
 
                     <div className="row">
                       <span className="rating-detail">
