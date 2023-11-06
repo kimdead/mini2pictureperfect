@@ -10,9 +10,15 @@ const HeroBanner = () => {
   const navigate = useNavigate();
   const { loading } = useFetch("/movie/upcoming");
 
-  const searchQueryHandler = (event) => {
-    if (event.key === "Enter" && query.length > 0) {
+  const searchQueryHandler = () => {
+    if (query.length > 0) {
       navigate(`/search/${query}`);
+    }
+  };
+
+  const handleKeyUp = (event) => {
+    if (event.key === "Enter") {
+      searchQueryHandler();
     }
   };
 
@@ -34,15 +40,13 @@ const HeroBanner = () => {
       <ContentWrapper>
         <div className="heroBannerContent">
           <div className="searchInput">
-            {/* <div className="title">Welcome.</div>
-            <div className="subTitle"> pictureperfect</div> */}
             <input
               type="text"
               placeholder="Search for a movie or tv show...."
               onChange={(e) => setQuery(e.target.value)}
-              onKeyUp={searchQueryHandler}
+              onKeyUp={handleKeyUp}
             />
-            <button>
+            <button onClick={searchQueryHandler}>
               <span className="icon">search</span>
             </button>
           </div>

@@ -9,7 +9,7 @@ import { fetchDataFromApi } from "../../utils/api";
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
 import MovieCard from "../../components/movieCard/MovieCard";
 
-import Pagination from "../../components/pagination/Pagination";
+import Pagination from "../../components/pagination/Pagination"; // Import your Pagination component
 
 let filters = {};
 
@@ -40,13 +40,13 @@ const Explore = () => {
     setLoading(true);
     fetchDataFromApi(`/discover/${mediaType}`, filters).then((res) => {
       setData(res);
-      setPageNum(1);
+      setPageNum(1); // Set the page number to 1 for initial data
       setLoading(false);
     });
   };
 
   const onPageChange = (newPage) => {
-    setPageNum(newPage);
+    setPageNum(newPage); // Update the page number
     fetchData(newPage);
   };
 
@@ -102,14 +102,15 @@ const Explore = () => {
           </div>
           <div className="filters">
             <Select
-              isMulti
+              isMulti={false}
               name="genres"
               value={genre}
-              closeMenuOnSelect={false}
               options={genresData?.genres}
               getOptionLabel={(option) => option.name}
               getOptionValue={(option) => option.id}
               onChange={onChange}
+              isClearable={true}
+              isSearchable={false}
               placeholder="Select genres"
               className="react-select-container genresDD"
               classNamePrefix="react-select"
@@ -119,6 +120,7 @@ const Explore = () => {
               value={sortby}
               options={sortbyData}
               onChange={onChange}
+              isSearchable={false}
               isClearable={true}
               placeholder="Sort by"
               className="react-select-container sortbyDD"
