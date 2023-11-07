@@ -8,7 +8,7 @@ import useFetch from "../../../hooks/useFetch";
 
 const CombinedCarousel = () => {
   const [endpoint, setEndpoint] = useState("movie");
-  const [timeWindow, setTimeWindow] = useState("week");
+  const [timeWindow] = useState("week");
   const { data: trendingData, loading: trendingLoading } = useFetch(
     `/trending/${endpoint}/${timeWindow}`
   );
@@ -21,10 +21,6 @@ const CombinedCarousel = () => {
 
   const onTabChange = (tab) => {
     setEndpoint(tab === "Movies" ? "movie" : "tv");
-  };
-
-  const onTimeWindowChange = (window) => {
-    setTimeWindow(window);
   };
 
   return (
